@@ -26,11 +26,7 @@ variable "bq-billing-export-table-name" {
 
 variable "bq-dashboard-dataset-name" {
   type        = string
-  description = "Bigquery dataset where the dashboard view will be created. Should already exist. Must be in the format <project-id>.<bq-dataset-name>"
-  validation {
-    condition = can(regex("^[0-9a-zA-Z-]*\\.[0-9a-zA-Z_]*$", var.bq-dashboard-dataset-name))
-    error_message = "Bq dataset id must be in the format <project-id>.<bq-dataset-name>"
-  }
+  description = "Bigquery dataset where the dashboard view will be created. Should already exist."
 }
 
 variable "looker-studio-service-agent-name" {
