@@ -23,5 +23,5 @@ output "looker_report_link" {
 output "gcp_service_account_name" {
   #https://developers.google.com/looker-studio/integrate/linking-api
   description = "Gcp service account name to be used with looker dashboard as datasource credentials."
-  value       = module.billing_dashboard.looker_report_link.gcp_service_account_name
+  value       = module.billing_dashboard.gcp_service_account_name
 }

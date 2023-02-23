@@ -35,6 +35,5 @@ variable "bq-dashboard-dataset-name" {
 
 variable "looker-studio-service-agent-name" {
   type        = string
-  default     = null
   description = "Looker studio service agent name to be used with the looker studio dashboard. Can be copied from https://lookerstudio.google.com/c/serviceAgentHelp. If empty no gcp service account will be created and looker dashboard will be used with the executor's personal gcp account only."
 }
