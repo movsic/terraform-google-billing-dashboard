@@ -15,7 +15,7 @@
  */
 
 module "billing_dashboard" {
-  source = "../.."
+  source = "git::https://github.com/movsic/terraform-google-billing-dashboard.git?ref=main"
 
   project-id  = var.project-id
   bq-billing-export-table-name = "data-analytics-pocs.public.billing_dashboard_export"
