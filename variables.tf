@@ -16,7 +16,7 @@
 
 #created by blueprints https://github.com/terraform-google-modules/terraform-google-module-template
 variable "project-id" {
-  description = "The project ID to deploy to"
+  description = "Project ID to deploy to"
   type        = string
 }
 
@@ -39,23 +39,29 @@ variable "looker-studio-service-agent-name" {
 variable "bq-dashboard-view-name" {
   type        = string
   default     = "billing-export-view"
-  description = "Bigquery view name. This view will be created."
+  description = "Bigquery view name for the billing export to be created."
 }
 
 variable "billing-data-interval" {
   type        = number
   default     = 13
-  description = "Time interval to be showed in view."
+  description = "Time interval in month to be showed in billing dashboard."
 }
 
 variable "looker-studio-service-account-name" {
   type        = string
   default     = "looker-studio-sa"
-  description = "GCP service account name to be used with the looker studio dashboard."
+  description = "Gcp service account name used to execute looker requests on behalf of looker service agent."
 }
 
 variable "looker-report-name" {
   type        = string
-  default     = "Billing-report"
+  default     = "billing-report"
   description = "Copied report name."
+}
+
+variable "bq-dashboard-view-labels" {
+  type        = map(string)
+  description = "A map of labels to apply to bigquery view."
+  default     = {}
 }

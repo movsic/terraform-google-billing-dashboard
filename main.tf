@@ -20,8 +20,8 @@ locals {
 }
 
 resource "google_bigquery_table" "target_view_name" {
-  project = var.project-id
-  dataset_id = var.bq-dashboard-dataset-name 
+  project    = var.project-id
+  dataset_id = var.bq-dashboard-dataset-name
   table_id   = var.bq-dashboard-view-name
 
   #needed to be able to recreate the view when terraform changes are applyed terraform
@@ -39,6 +39,7 @@ resource "google_bigquery_table" "target_view_name" {
       WHERE _PARTITIONDATE > DATE_SUB(CURRENT_DATE(), INTERVAL ${var.billing-data-interval} MONTH)
 EOF
   }
+  labels = var.bq-dashboard-view-labels
 }
 
 #service account to be used with looker studio service agent
