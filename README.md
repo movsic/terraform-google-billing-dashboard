@@ -1,9 +1,5 @@
 # Terraform Google Billing Dashboard
 
-### tagline
-1. This is an auto-generated module.
-
-### detailed
 This module automates creation of the GCP Billnig Dashboard. Billing Dashboard, created in Looker Studio, uses Billing Export dataset, and offers drill down and slice a dice capabilities to analyze GCP spend using charts, tables and filters.
 
 It supports creating:
@@ -15,7 +11,7 @@ It supports creating:
 
 Due to the Looker Studion API limitations the output of this script will generate Looker Studio Linking Api link. You need to click on this link and save the report. More details [here] (https://developers.google.com/looker-studio/integrate/linking-api#linking_api_user_experience).
 
-### preDeploy
+### Requirements
 1. To deploy this blueprint you must have an active billing account and billing permissions.
 1. Verify or enable GCP Billing Exports - standard and detailed usage costs exports (if enabling for first time await export tables are created before proceeding to next step)
 1. If you plan to use Looker Studio Service Agent instead of your credentials copy the service agent name from [here] (https://lookerstudio.google.com/c/serviceAgentHelp) and pass it to the script via the looker-studio-service-agent-name parameter.
@@ -92,22 +88,34 @@ No modules.
 
 ## Requirements
 
-### Configure a Service Account
+### Service Account
 In order to execute this module you must have a Service Account with the following roles on the project:
 
 - roles/bigquery.dataEditor
 - roles/iam.serviceAccountAdmin
 - roles/iam.projectIamAdmin
 
+The [Project Factory module][project-factory-module] and the
+[IAM module][iam-module] may be used in combination to provision a
+service account with the necessary roles applied.
+
 ### Org policies that could block
+
+Org policies that could block the deployment of this solution
 
 - constraints/iam.disableServiceAccountCreation
 
-### APIs requered
+### APIs
 
-- cloudapis.googleapis.com
-- bigquery.googleapis.com
-- cloudresourcemanager.googleapis.com
+A project with the following APIs enabled must be used to host the
+resources of this module:
+
+- Google Cloud APIs `cloudapis.googleapis.com`
+- BigQuery API `bigquery.googleapis.com`
+- Cloud Resource Manager API `cloudresourcemanager.googleapis.com`
+
+The [Project Factory module][project-factory-module] can be used to
+provision a project with the necessary APIs enabled.
 
 ### Software
 
@@ -115,27 +123,6 @@ The following dependencies must be available:
 
 - [Terraform][terraform] v0.13
 - [Terraform Provider for GCP][terraform-provider-gcp] plugin v3.0
-
-### Service Account
-
-A service account with the following roles must be used to provision
-the resources of this module:
-
-- Storage Admin: `roles/storage.admin`
-
-The [Project Factory module][project-factory-module] and the
-[IAM module][iam-module] may be used in combination to provision a
-service account with the necessary roles applied.
-
-### APIs
-
-A project with the following APIs enabled must be used to host the
-resources of this module:
-
-- Google Cloud Storage JSON API: `storage-api.googleapis.com`
-
-The [Project Factory module][project-factory-module] can be used to
-provision a project with the necessary APIs enabled.
 
 ## Contributing
 
