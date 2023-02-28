@@ -30,7 +30,7 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_bq-billing-export-table-name"></a> [bq-billing-export-table-name](#input\_bq-billing-export-table-name) | Standard billing export bigquery table name. | `string` | n/a | yes |
 | <a name="input_bq-dashboard-dataset-name"></a> [bq-dashboard-dataset-name](#input\_bq-dashboard-dataset-name) | Bigquery dataset where the dashboard view will be created. Should already exist. | `string` | n/a | yes |
-| <a name="input_looker-studio-service-agent-name"></a> [looker-studio-service-agent-name](#input\_looker-studio-service-agent-name) | Looker studio service agent name to be used with the looker studio dashboard. Can be copied from https://lookerstudio.google.com/c/serviceAgentHelp. If empty no gcp service account will be created and looker dashboard will be used with the executor's personal gcp account only. | `string` | n/a | yes |
+| <a name="input_looker-studio-service-agent-name"></a> [looker-studio-service-agent-name](#input\_looker-studio-service-agent-name) | Looker studio service agent name to be used with the looker studio dashboard. Can be copied from https://lookerstudio.google.com/c/serviceAgentHelp. If empty no gcp service account will be created and looker dashboard will be used with the executor's personal gcp account only. | `string` | null | no |
 | <a name="input_project-id"></a> [project-id](#input\_project-id) | The project ID to deploy to | `string` | n/a | yes |
 
 ## Outputs
