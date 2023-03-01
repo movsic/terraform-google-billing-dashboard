@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-output "looker_report_link" {
+output "looker_studio_report_link" {
   #https://developers.google.com/looker-studio/integrate/linking-api
   description = "Looker Linking API url."
-  value       = module.billing_dashboard.looker_report_link
+  value       = module.billing_dashboard.looker_studio_report_link
 }
 
 output "gcp_service_account_name" {

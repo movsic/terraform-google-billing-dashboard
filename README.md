@@ -72,7 +72,7 @@ No modules.
 | <a name="input_bq-dashboard-dataset-name"></a> [bq-dashboard-dataset-name](#input\_bq-dashboard-dataset-name) | Bigquery dataset where the dashboard view will be created. Should already exist. | `string` | n/a | yes |
 | <a name="input_bq-dashboard-view-labels"></a> [bq-dashboard-view-labels](#input\_bq-dashboard-view-labels) | A map of labels to apply to bigquery view. | `map(string)` | `{}` | no |
 | <a name="input_bq-dashboard-view-name"></a> [bq-dashboard-view-name](#input\_bq-dashboard-view-name) | Bigquery view name for the billing export to be created. | `string` | `"billing-export-view"` | no |
-| <a name="input_looker-report-name"></a> [looker-report-name](#input\_looker-report-name) | Copied report name. | `string` | `"billing-report"` | no |
+| <a name="input_looker-studio-report-name"></a> [looker-studio-report-name](#input\_looker-studio-report-name) | Copied report name. | `string` | `"billing-report"` | no |
 | <a name="input_looker-studio-service-account-name"></a> [looker-studio-service-account-name](#input\_looker-studio-service-account-name) | Gcp service account name used to execute looker requests on behalf of looker service agent. | `string` | `"looker-studio-sa"` | no |
 | <a name="input_looker-studio-service-agent-name"></a> [looker-studio-service-agent-name](#input\_looker-studio-service-agent-name) | Looker studio service agent name to be used with the looker studio dashboard. Can be copied from https://lookerstudio.google.com/c/serviceAgentHelp. If empty no gcp service account will be created and looker dashboard will be used with the executor's personal gcp account only. | `string` | `null` | no |
 | <a name="input_project-id"></a> [project-id](#input\_project-id) | Project ID to deploy to | `string` | n/a | yes |
@@ -82,7 +82,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_gcp_service_account_name"></a> [gcp\_service\_account\_name](#output\_gcp\_service\_account\_name) | Gcp service account name to be used with looker dashboard as datasource credentials. |
-| <a name="output_looker_report_link"></a> [looker\_report\_link](#output\_looker\_report\_link) | Looker Linking API url. |
+| <a name="output_looker_studio_report_link"></a> [looker\_studio\_report\_link](#output\_looker\_studio\_report\_link) | Looker Linking API url. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

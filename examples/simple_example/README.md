@@ -38,7 +38,7 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_gcp_service_account_name"></a> [gcp\_service\_account\_name](#output\_gcp\_service\_account\_name) | Gcp service account name to be used with looker dashboard as datasource credentials. |
-| <a name="output_looker_report_link"></a> [looker\_report\_link](#output\_looker\_report\_link) | Looker Linking API url. |
+| <a name="output_looker_studio_report_link"></a> [looker\_studio\_report\_link](#output\_looker\_studio\_report\_link) | Looker Linking API url. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 To provision this example, run the following from within this directory:

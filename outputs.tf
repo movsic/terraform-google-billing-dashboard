@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-output "looker_report_link" {
+output "looker_studio_report_link" {
   description = "Looker Linking API url."
-  value       = "https://datastudio.google.com/reporting/create?c.reportId=${local.looker-template-report-id}&r.reportName=${var.looker-report-name}&ds.ds8.refreshFields=false&ds.ds8.connector=bigQuery&ds.ds8.projectId=${var.project-id}&ds.ds8.type=TABLE&ds.ds8.datasetId=${var.bq-dashboard-dataset-name}&ds.ds8.tableId=${var.bq-dashboard-view-name}"
+  value       = "https://datastudio.google.com/reporting/create?c.reportId=${local.looker-template-report-id}&r.reportName=${var.looker-studio-report-name}&ds.ds8.refreshFields=false&ds.ds8.connector=bigQuery&ds.ds8.projectId=${var.project-id}&ds.ds8.type=TABLE&ds.ds8.datasetId=${var.bq-dashboard-dataset-name}&ds.ds8.tableId=${var.bq-dashboard-view-name}"
 }
 
 output "gcp_service_account_name" {

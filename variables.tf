@@ -54,7 +54,7 @@ variable "looker-studio-service-account-name" {
   description = "Gcp service account name used to execute looker requests on behalf of looker service agent."
 }
 
-variable "looker-report-name" {
+variable "looker-studio-report-name" {
   type        = string
   default     = "billing-report"
   description = "Copied report name."
