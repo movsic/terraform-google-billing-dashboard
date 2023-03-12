@@ -20,5 +20,5 @@ module "billing_dashboard" {
   project-id  = var.project-id
   bq-billing-export-table-name = "data-analytics-pocs.public.billing_dashboard_export"
   bq-dashboard-dataset-name = "billing_test"
-  looker-studio-service-agent-name = "service-org-433637338589@gcp-sa-datastudio.iam.gserviceaccount.com"
+  looker-studio-service-agent-name = "service-org-test@gcp-sa-datastudio.iam.gserviceaccount.com"
 }
